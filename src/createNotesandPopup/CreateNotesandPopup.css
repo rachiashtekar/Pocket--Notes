@@ -33,7 +33,8 @@
   left: 250px; */
   position: sticky;
   top: 700px; /* Adjust the top position as needed */
-  left: calc(50% - 40px); 
+  /* left: calc(60% - 50px);  */
+  left: 300px;
 }
 .btn {
   background: none;
@@ -46,17 +47,17 @@
   left: 2px;
   top: 0px;
 } 
-@media (max-width: 480px) {
+@media (max-width: 510px) {
     
     .notes-container {
       width: 100%;
-      display: none;
+      /* display: none; */
     }
   
     .create-notes-button {
       position: sticky;
       top: 600px; 
-      left: 300px;
+      left: 200px;
       
      
     }
