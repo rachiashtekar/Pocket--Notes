@@ -56,14 +56,14 @@
   
     .create-notes-button {
       position: sticky;
-      top: 600px; 
-      left: 200px;
+      top: 700px; 
+      left: 900px;
       
      
     }
   
     .btn {
-      font-size: 30px; 
+      font-size: 70px; 
     }
   } 
   
