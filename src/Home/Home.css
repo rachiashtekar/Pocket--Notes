@@ -44,3 +44,13 @@
   top: 0px;
   background: #dae5f5;
 }
+@media only screen and (max-width: 479px) {
+  .main-container {
+    display: none !important; /* Hide the main container on small screens */
+  }
+
+  .big-container {
+    display: block !important; /* Show the big container on small screens */
+    /* Add other styles for the big container as needed */
+  }
+}

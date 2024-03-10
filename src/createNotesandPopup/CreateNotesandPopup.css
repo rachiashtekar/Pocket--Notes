@@ -7,7 +7,7 @@
 
 .notes-container {
   height: 700px;
-  width: 400px;
+  width: 480px;
  border: 2px solid white;
   background: white;
 }
@@ -47,9 +47,10 @@
   top: 0px;
 } 
 @media (max-width: 480px) {
-    /* Adjust styles for screens with a maximum width of 480px (typical mobile width) */
+    
     .notes-container {
-      width: 100%; /* Make the container full width */
+      width: 100%;
+      display: none;
     }
   
     .create-notes-button {
@@ -57,10 +58,11 @@
       top: 600px; 
       left: 300px;
       
-      /* Adjust the top position for better spacing on smaller screens */
+     
     }
   
     .btn {
-      font-size: 30px; /* Adjust font size for better readability on smaller screens */
+      font-size: 30px; 
     }
-  }
+  } 
+  
