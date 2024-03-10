@@ -6,6 +6,9 @@ function CreateNotesAndPopup (){
             <p className="first-line">Pocket Notes</p> 
            
         </div>
+        <div className="create-notes-button">
+            <button className="btn">+</button>
+        </div>
         </div>
     )
 }
