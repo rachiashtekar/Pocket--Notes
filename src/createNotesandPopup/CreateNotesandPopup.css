@@ -32,7 +32,7 @@
   top: 500px;
   left: 250px; */
   position: sticky;
-  top: 700px; /* Adjust the top position as needed */
+  top: 1000px; /* Adjust the top position as needed */
   /* left: calc(60% - 50px);  */
   left: 300px;
 }
@@ -47,11 +47,35 @@
   left: 2px;
   top: 0px;
 } 
+.color-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+
+/* --------------------------------------new one ------------------------------- */
+.color-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-list li {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+
+
 @media (max-width: 510px) {
     
     .notes-container {
       width: 100%;
-      /* display: none; */
+    
     }
   
     .create-notes-button {
@@ -61,6 +85,10 @@
       
      
     }
+   
+     
+   
+    
   
     .btn {
       font-size: 70px; 
