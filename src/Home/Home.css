@@ -38,8 +38,7 @@
 .main-container {
   height: 700px;
   width: 1130px;
-
-  position: absolute;
+ position: absolute;
   left: 400px;
   top: 0px;
   background: #dae5f5;
