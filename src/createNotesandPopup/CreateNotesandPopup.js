@@ -1,114 +1,6 @@
-// import "./CreateNotesandPopup.css";
-// const colors = ["#B38BFA", "#FF79F2", " #43E6FC", "#F19576","#0047FF","#6691FF"];
-
-// function CreateNotesAndPopup() {
-//   return (
-//     <div className="notes-container">
-//       <div className="notes-data">
-//         <p className="first-line">Pocket Notes</p>
-//       </div>
-
-//       <div className="form-data">
-//         <div>
-//           <p>create New group</p>
-//           Group Name: <input placeholder="Enter Group Name..." type="text" />
-//         </div>
-//         <div>
-    
-          
-//           <ul className="color-list">
-//            choose the colors :  {colors.map((color, index) => (
-//               <li key={index} style={{ backgroundColor: color }}></li>
-//             ))}
-//           </ul>
-          
-//         </div>
-//         <div>
-//           <button>Create</button>
-//         </div>
-//       </div>
-//       <div className="create-notes-button">
-//         <button className="btn">+</button>
-//       </div>
-//     </div>
-//   );
-// }
-// export default CreateNotesAndPopup;
-
-// import React, { useState } from "react";
-// import "./CreateNotesandPopup.css";
-// const colors = ["#B38BFA", "#FF79F2", "#43E6FC", "#F19576", "#0047FF", "#6691FF"];
-
-// function CreateNotesAndPopup() {
-//   const [groupName, setGroupName] = useState("");
-//   const [selectedColor, setSelectedColor] = useState(colors[0]);
-//   const [isFormOpen, setFormOpen] = useState(false);
-
-//   const handleInputChange = (e) => {
-//     setGroupName(e.target.value);
-//   };
-
-//   const handleColorChange = (color) => {
-//     setSelectedColor(color);
-//   };
-
-//   const handleCreate = () => {
-//     // Save data to localStorage
-//     const noteData = {
-//       groupName,
-//       selectedColor,
-//     };
-//     localStorage.setItem("noteData", JSON.stringify(noteData));
-
-//     // Reset form and close it
-//     setGroupName("");
-//     setSelectedColor(colors[0]);
-//     setFormOpen(false);
-//   };
-
-//   return (
-//     <div className="notes-container">
-//       <div className="notes-data">
-//         <p className="first-line">Pocket Notes</p>
-//       </div>
-
-//       {isFormOpen && (
-//         <div className="form-data">
-//           <div>
-//             <p>Create New group</p>
-//             Group Name: <input placeholder="Enter Group Name..." type="text" value={groupName} onChange={handleInputChange} />
-//           </div>
-//           <div>
-//             <ul className="color-list">
-//               Choose the colors:
-//               {colors.map((color, index) => (
-//                 <li
-//                   key={index}
-//                   style={{ backgroundColor: color, border: color === selectedColor ? '2px solid #000' : 'none' }}
-//                   onClick={() => handleColorChange(color)}
-//                 ></li>
-//               ))}
-//             </ul>
-//           </div>
-//           <div>
-//             <button onClick={handleCreate}>Create</button>
-//           </div>
-//         </div>
-//       )}
-
-//       <div className="create-notes-button">
-//         <button className="btn" onClick={() => setFormOpen(!isFormOpen)}>
-//           +
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default CreateNotesAndPopup;
-
 import React, { useState, useEffect } from "react";
 import "./CreateNotesandPopup.css";
+
 const colors = ["#B38BFA", "#FF79F2", "#43E6FC", "#F19576", "#0047FF", "#6691FF"];
 
 function CreateNotesAndPopup() {
@@ -118,8 +10,15 @@ function CreateNotesAndPopup() {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
-    setNotes(storedNotes);
+    try {
+      const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+      console.log("Stored Notes:", storedNotes);
+      setNotes(storedNotes);
+    } catch (error) {
+      console.error("Error parsing JSON from local storage:", error);
+      // Handle the error, e.g., set notes to an empty array
+      setNotes([]);
+    }
   }, []);
 
   const handleInputChange = (e) => {
@@ -128,6 +27,11 @@ function CreateNotesAndPopup() {
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
+  };
+
+  const getInitials = (name) => {
+    const words = name.split(" ");
+    return words.reduce((initials, word) => initials + word[0], "").toUpperCase();
   };
 
   const handleCreate = () => {
@@ -149,15 +53,25 @@ function CreateNotesAndPopup() {
 
   return (
     <div className="notes-container">
-      <div className="notes-data">
+      <div>
         <p className="first-line">Pocket Notes</p>
       </div>
+
+      {/* <div className="notes-data">
+        {isFormOpen ? (
+          <div className="circle-bg">
+            <div className="circle" style={{ backgroundColor: selectedColor }}>
+              {getInitials(groupName)}
+            </div>
+          </div>
+        ) : null}
+      </div> */}
 
       {isFormOpen && (
         <div className="form-data">
           <div>
             <p>Create New group</p>
-            Group Name: <input placeholder="Enter Group Name..." type="text" value={groupName} onChange={handleInputChange} />
+          Group Name:  <input placeholder="Enter Group Name..." type="text" value={groupName} onChange={handleInputChange} />
           </div>
           <div>
             <ul className="color-list">
@@ -176,6 +90,23 @@ function CreateNotesAndPopup() {
           </div>
         </div>
       )}
+
+      {/* Displaying saved notes */}
+      <div className="saved-notes">
+        {/* <p>Saved Notes:</p> */}
+        <ul>
+          {notes.map((note, index) => (
+            <li key={index}>
+              <div className="circle-bg">
+                <div className="circle" style={{ backgroundColor: note.selectedColor }}>
+                  {getInitials(note.groupName)}
+                </div>
+              </div>
+              <span> {note.groupName}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className="create-notes-button">
         <button className="btn" onClick={() => setFormOpen(!isFormOpen)}>
