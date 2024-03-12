@@ -1,17 +1,20 @@
-
 import React, { useState, useEffect } from "react";
 import "./CreateNotesandPopup.css";
 
-const colors = ["#B38BFA", "#FF79F2", "#43E6FC", "#F19576", "#0047FF", "#6691FF"];
-
+const colors = [
+  "#B38BFA",
+  "#FF79F2",
+  "#43E6FC",
+  "#F19576",
+  "#0047FF",
+  "#6691FF",
+];
 
 const getInitials = (name) => {
   const words = name.split(" ");
   const initials = words.reduce((acc, word) => acc + word[0], "");
   return initials.toUpperCase();
 };
-
-
 
 function CreateNotesAndPopup() {
   const [groupName, setGroupName] = useState("");
@@ -69,34 +72,40 @@ function CreateNotesAndPopup() {
       </div>
 
       {isFormOpen && (
-        <div className="form-data">
-          <div>
-            <p>Create New group</p>
-            Group Name:{" "}
-            <input
-              placeholder="Enter Group Name..."
-              type="text"
-              value={groupName}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <ul className="color-list">
-              Choose the colors:
-              {colors.map((color, index) => (
-                <li
-                  key={index}
-                  style={{
-                    backgroundColor: color,
-                    border: color === selectedColor ? "2px solid #000" : "none",
-                  }}
-                  onClick={() => handleColorChange(color)}
-                ></li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <button onClick={handleCreate}>Create</button>
+        <div className="form-overlay">
+          <div className="form-data">
+            <div className="form-div">
+              <p style={{ fontSize: "20px", fontWeight: "500" }}>Create New Group</p>
+              Group Name : {" "}
+              
+            
+              <input className="input-name"
+                placeholder="Enter Group Name..."
+                type="text"
+                value={groupName}
+                onChange={handleInputChange}
+              />
+            
+              <div>
+                <ul className="color-list">
+                  Choose the colors :
+
+                  {colors.map((color, index) => (
+                    <li
+                      key={index}
+                      style={{
+                        backgroundColor: color,
+                        border: color === selectedColor ? "2px solid #000" : "none",
+                      }}
+                      onClick={() => handleColorChange(color)}
+                    ></li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <button className="create-btn" onClick={handleCreate}>Create</button>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -109,22 +118,19 @@ function CreateNotesAndPopup() {
               <div className="circle-bg">
                 <div
                   className="circle"
-                  style={{ backgroundColor: note.selectedColor }}
+                  style={{ backgroundColor: note.selectedColor,margin:"10px"  }}
                 >
                   {getInitials(note.groupName)}
                 </div>
               </div>
-              <span> {note.groupName}</span>
+              <span style={{fontSize:"18px",fontWeight:"500",padding:"10px"}}> {note.groupName}</span>
             </li>
           ))}
         </ul>
       </div>
 
       <div className="create-notes-button">
-        <button
-          className="btn"
-          onClick={() => setFormOpen(!isFormOpen)}
-        >
+        <button className="btn" onClick={() => setFormOpen(!isFormOpen)}>
           +
         </button>
       </div>
