@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+/* .app-container {
+  max-height: 500px; /* Set maximum height of the container to viewport height */
+  /* overflow-y: auto; /* Enable vertical scrollbar if content overflows */
+/* } */ 

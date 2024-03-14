@@ -202,8 +202,9 @@ function Home({ selectedGroup }) {
                   {tasks.map((task, index) => (
                     <li key={index} className="task-item">
                       <div className="task-info">
+                      <span className="task">{task.text}</span>
                         <span className="time">{task.time}</span>
-                        <span className="task">{task.text}</span>
+                        {/* <span className="task">{task.text}</span> */}
                       </div>
                     </li>
                   ))}

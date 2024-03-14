@@ -149,9 +149,14 @@
   }
   
   .task-info {
+    margin: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    border: 2px solid red;
+ 
+    background-color: white;
+    border-radius: 8px;
+
   }
   
   .time {
@@ -178,10 +183,10 @@
     list-style-type: none;
   }
   .home-heading{
-    background:white;
-    height: 400px;
+    /* background:white; */
+    height: 390px;
     width: 1130px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
   .home-textarea{
    height: 30vh;
@@ -201,6 +206,9 @@
   }
   
 }
+/* media qury for selected gropu */
+
+
 
 /* For when selectedGroup is not present */
 .no-selected-group {
@@ -230,6 +238,7 @@
     left: 400px;
     top: 0px;
     background: #dae5f5;
+   
   }
   .heading {
     font-weight: 500;
@@ -254,15 +263,25 @@
     left: 300px;
     top: 10px;
   }
+  @media only screen and (max-width: 479px) {
+    .main-container {
+      display: none !important; /* Hide the main container on small screens */
+     }   
+  
+     .big-container {
+      display: block 
+    } 
+   }  
+  
   
  
 }
-@media only screen and (max-width: 479px) {
+/* @media only screen and (max-width: 479px) {
   .main-container {
     display: none !important; /* Hide the main container on small screens */
-   }   
+   /* }    */
 
-   .big-container {
+   /* .big-container {
     display: block 
   } 
- }  
+ }    */
