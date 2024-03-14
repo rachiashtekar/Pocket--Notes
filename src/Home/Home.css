@@ -1,126 +1,10 @@
-  /* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Single+Day&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-}
-.container {
-  height: 200px;
-  width: 400px;
-
-  position: relative;
-  left: 400px;
-  top: 80px;
-}
-.desktop-image {
-  height: 200px;
-  width: 350px;
-}
-.group-heading {
-  display: flex;
-  align-items: center;
-  background: blue;
-  color: white;
-  margin-top: 10px;
-}
-
-.initials-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-}
-.task-item {
-  margin-bottom: 10px;
-}
-
-.task-info {
-  display: flex;
-  justify-content: space-between;
-}
-
-.time {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.task {
-  flex: 3;
-}
-
-.group-name {
-  margin: 0;
-}
-
-.data {
-  height: 200px;
-  width: 600px;
-  text-align: center;
-
-  position: relative;
-  left: 300px;
-  top: 10px;
-}
-.front-data{
-  border: 2px solid red;
- 
-    height: 200px;
-    width: 600px;
-    text-align: center;
-  
-    position:sticky;
-    left: 300px;
-    top: 80px;
-  }
-
-.heading {
-  font-weight: 500;
-  font-size: 30px;
-  font-family: "Roboto", sans-serif;
-}
-.paragraph {
-  font-size: 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-}
-
-.main-container {
-  height: 700px;
-  width: 1130px;
- position: absolute;
-  left: 400px;
-  top: 0px;
-  background: #dae5f5;
-}
-.home-list{
-  list-style-type: none;
-}
-.home-heading{
-  background:white;
-  height: 500px;
-  width: 700px;
-}
-
-@media only screen and (max-width: 479px) {
-  .main-container {
-    display: none !important; /* Hide the main container on small screens */
-   /* }   */
-
-   /* .big-container {
-    display: block 
-  } */
-/* }  
-  */ 
-
-  /* For when selectedGroup is present */
+/* For when selectedGroup is present */
 .selected-group {
   /* Specific styles for selected group */
   .group-heading {
     display: flex;
     align-items: center;
-    background: #001F8B;
+    background: #001f8b;
 
     color: white;
     margin-top: 1px;
@@ -128,9 +12,8 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     height: 70px;
-   
   }
-  
+
   .initials-circle {
     width: 50px;
     height: 50px;
@@ -142,80 +25,85 @@
     margin-left: 10px;
     font-weight: 600;
     font-size: 20px;
-    
   }
   .task-item {
     margin-bottom: 10px;
   }
-  
+
   .task-info {
     margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
- 
+
     background-color: white;
     border-radius: 8px;
-
   }
-  
+
   .time {
     flex: 1;
     margin-right: 10px;
   }
-  
+
   .task {
     flex: 3;
   }
-  
+
   .group-name {
     margin: 0;
+ 
   }
   .main-container {
     height: 700px;
     width: 1130px;
-   position: absolute;
+    position: absolute;
     left: 400px;
     top: 0px;
     background: #dae5f5;
   }
-  .home-list{
+  .home-list {
     list-style-type: none;
   }
-  .home-heading{
+  .home-heading {
     /* background:white; */
     height: 390px;
     width: 1130px;
     /* border: 2px solid red; */
   }
-  .home-textarea{
-   height: 30vh;
-   width:73vw;
-    border:18px solid #001F8B;
+  .home-textarea {
+    height: 30vh;
+    width: 73vw;
+    border: 18px solid #001f8b;
     background-color: white;
-    margin-left:10px;
+    margin-left: 10px;
     border-radius: 9px;
     margin-top: 10px;
   }
-  .outer-textarea{
-    background: #001F8B;
-    height:31vh ;
+  .outer-textarea {
+    background: #001f8b;
+    height: 31vh;
     /* margin-top: 10px; */
     border-radius: 9px;
-    
+  }
+  @media only screen and (max-width: 479px) {
+    .main-container {
+      display: none; /* Small screen पर main container को छुपाएँ */
+    }
+  
+    .selected-group {
+      display: block !important; /* Small screen पर selected group को दिखाएँ */
+    }
   }
   
 }
-/* media qury for selected gropu */
-
-
+/* media qury for selected group */
 
 /* For when selectedGroup is not present */
 .no-selected-group {
   .container {
     height: 200px;
     width: 400px;
-  
+
     position: relative;
     left: 400px;
     top: 40px;
@@ -234,11 +122,10 @@
   .main-container {
     height: 700px;
     width: 1130px;
-   position: absolute;
+    position: absolute;
     left: 400px;
     top: 0px;
     background: #dae5f5;
-   
   }
   .heading {
     font-weight: 500;
@@ -258,7 +145,7 @@
     height: 200px;
     width: 600px;
     text-align: center;
-  
+
     position: relative;
     left: 300px;
     top: 10px;
@@ -266,22 +153,10 @@
   @media only screen and (max-width: 479px) {
     .main-container {
       display: none !important; /* Hide the main container on small screens */
-     }   
-  
-     .big-container {
-      display: block 
-    } 
-   }  
-  
-  
- 
-}
-/* @media only screen and (max-width: 479px) {
-  .main-container {
-    display: none !important; /* Hide the main container on small screens */
-   /* }    */
+    }
 
-   /* .big-container {
-    display: block 
-  } 
- }    */
+    .big-container {
+      display: block;
+    }
+  }
+}

@@ -112,10 +112,10 @@ function CreateNotesAndPopup({ onGroupSelect }) {
         </div>
       )}
 
-      <div className="saved-notes">
+      <div className="saved-notes"  >
         <ul>
           {notes.map((note, index) => (
-            <li key={index} onClick={() => handleGroupClick(index)}>
+            <li key={index} onClick={() => handleGroupClick(index)  }>
               <div className="circle-bg">
                 <div
                   className="circle"
@@ -124,7 +124,7 @@ function CreateNotesAndPopup({ onGroupSelect }) {
                   {getInitials(note.groupName)}
                 </div>
               </div>
-              <span style={{ fontSize: '18px', fontWeight: '500', padding: '10px' }}>
+              <span style={{ fontSize: '18px', fontWeight: '500', padding: '10px'  }}>
                 {' '}
                 {note.groupName}
               </span>

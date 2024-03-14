@@ -166,10 +166,19 @@
   border-radius: 10px;
   z-index: 2; /* Ensure it's above the blur backdrop */
 }
+.saved-notes li {
+  cursor: pointer; /* Add pointer cursor to indicate clickable element */
+}
+
+.saved-notes li:hover {
+  background: #2f2f2f2b;
+  border-radius: 2px; 
+ 
+}
 
 
 
-@media (max-width: 510px) {
+@media (max-width: 479px) {
   .notes-container {
     width: 100%;
   }
