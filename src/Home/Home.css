@@ -1,4 +1,7 @@
 /* For when selectedGroup is present */
+*{
+  box-sizing: border-box;
+}
 .selected-group {
   /* Specific styles for selected group */
   .group-heading {
