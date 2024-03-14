@@ -108,13 +108,13 @@ function Home({ selectedGroup }) {
                     style={{
                       resize:"none",
                       maxHeight: "23vh",
-                      maxWidth: "69vw",
+                      maxWidth: "67vw",
                       borderRadius: "9px",
                       border: "none",
                       fontSize: "25px",
                       background:"white",
                       height:"23vh",
-                      width:"69vw"
+                      width:"67vw"
                      
                     }}
                     placeholder="Enter your text here..........."
