@@ -56,7 +56,7 @@
   flex-wrap: wrap;
   /* border-radius: 50%; */
   border: none;
-  margin-top: 20px;
+  margin-top: 5%;
 }
 
 .color-list li {
@@ -79,8 +79,8 @@
 
 .circle {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 3vw;
+  height: 6vh;
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -91,15 +91,15 @@
 }
 
 .form-div {
-  height: 200px;
-  width: 400px;
+  height: 15vh;
+  width: 25vw;
   border: 2px solid white;
   border-radius: 6px;
 
-  margin: 10px;
+  /* margin: 1px; */
   font-size: 20px;
   font-weight: 500;
-  padding: 10px;
+  padding: 2%;
 }
 
 /* popup */
@@ -131,11 +131,11 @@
 .create-btn {
   background-color: #16008b;
   color: white;
-  height: 30px;
-  width: 70px;
+  height: 5vh;
+  width: 7vw;
   float: right;
   position: relative;
-  top: 20px;
+  top: 15%;
   border-radius: 11px;
   border: none;
 }
