@@ -25,17 +25,24 @@
 
 .create-notes-button {
   background: #16008b;
-  height: 8vh;
-  width: 9%;
+  height: 7vh;
+  width: 5%;
   /* margin: 10px; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  /* position: relative;
   top: 30rem;
-  left: 40%;
-}
+  left: 40%; */
+
+    position: fixed; /* Set position to fixed */
+    bottom: 10px; /* Distance from the bottom of the viewport */
+    left: 17%; /* Distance from the right of the viewport */
+    z-index: 1000; /* Ensure button appears above other elements */
+  }
+  
+
 
 .btn {
   background: none;
