@@ -106,6 +106,7 @@ function Home({ selectedGroup }) {
                 <div className="home-textarea">
                   <textarea
                     style={{
+                      resize:"none",
                       maxHeight: "23vh",
                       maxWidth: "69vw",
                       borderRadius: "9px",
