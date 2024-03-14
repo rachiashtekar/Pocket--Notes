@@ -79,7 +79,7 @@ function Home({ selectedGroup }) {
                   Send and receive messages without keeping your phone online.
                   Use Pocket Notes on up to 4 linked devices and 1 mobile phone
                 </p>
-                <p style={{ marginTop: "280px" }}>
+                <p style={{ marginTop: "40%" }}>
                   <img src={lock} alt="lock" /> end-to-end encrypted
                 </p>
               </div>
