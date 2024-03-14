@@ -7,8 +7,8 @@
 }
 
 .notes-container {
-  height: 700px;
-  width: 480px;
+  height: 70%;
+  width: 50%;
   border: 2px solid white;
   background: white;
 }
@@ -18,23 +18,23 @@
   font-size: 35px;
   font-weight: 500;
   /* text-align: center; */
-  margin-top: 30px;
-  margin-left: 80px;
+  margin-top: 5%;
+  margin-left: 8%;
   background: none;
 }
 
 .create-notes-button {
   background: #16008b;
-  height: 80px;
-  width: 80px;
-  margin: 10px;
-  border-radius: 40px;
+  height: 8vh;
+  width: 9%;
+  /* margin: 10px; */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 1000px;
-  left: 300px;
+  position: relative;
+  top: 30rem;
+  left: 40%;
 }
 
 .btn {
@@ -47,7 +47,7 @@
   left: 2px;
   top: 0px;
 }
-
+/* till done */
 .color-list {
   list-style: none;
   padding: 0;
