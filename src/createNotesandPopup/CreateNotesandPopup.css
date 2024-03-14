@@ -91,15 +91,15 @@
 }
 
 .form-div {
-  height: 15vh;
-  width: 25vw;
+  height: 200px;
+  width: 400px;
   border: 2px solid white;
   border-radius: 6px;
 
   /* margin: 1px; */
   font-size: 20px;
   font-weight: 500;
-  padding: 2%;
+  padding: 10px;
 }
 
 /* popup */
