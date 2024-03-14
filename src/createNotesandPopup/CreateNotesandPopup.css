@@ -79,8 +79,8 @@
 
 .circle {
   display: inline-block;
-  width: 3vw;
-  height: 6vh;
+  width: 40px;
+  height: 40px;
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -131,11 +131,11 @@
 .create-btn {
   background-color: #16008b;
   color: white;
-  height: 5vh;
-  width: 7vw;
+  height: 30px;
+  width: 70px;
   float: right;
   position: relative;
-  top: 15%;
+  top: 20px;
   border-radius: 11px;
   border: none;
 }
