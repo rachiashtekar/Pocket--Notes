@@ -151,6 +151,7 @@
   .task-info {
     display: flex;
     justify-content: space-between;
+    border: 2px solid red;
   }
   
   .time {
@@ -180,6 +181,7 @@
     background:white;
     height: 400px;
     width: 1130px;
+    border: 2px solid red;
   }
   .home-textarea{
    height: 30vh;
@@ -252,5 +254,15 @@
     left: 300px;
     top: 10px;
   }
+  
  
 }
+@media only screen and (max-width: 479px) {
+  .main-container {
+    display: none !important; /* Hide the main container on small screens */
+   }   
+
+   .big-container {
+    display: block 
+  } 
+ }  
