@@ -7,10 +7,11 @@
 }
 
 .notes-container {
-  height: 70%;
+  height: 100%;
   width: 50%;
   border: 2px solid white;
   background: white;
+  
 }
 
 .first-line {
@@ -64,6 +65,7 @@
   /* border-radius: 50%; */
   border: none;
   margin-top: 5%;
+
 }
 
 .color-list li {
@@ -76,6 +78,7 @@
   border-radius: 50%;
 
   border: none;
+ 
 }
 /* ------------------------new--------------------------- */
 
@@ -182,6 +185,11 @@
   border-radius: 2px; 
  
 }
+.saved-notes {
+  overflow-y: auto; /* Add vertical scrollbar if content overflows vertically */
+  max-height: 60vh; /* Set maximum height for the saved-notes section */
+}
+
 
 
 

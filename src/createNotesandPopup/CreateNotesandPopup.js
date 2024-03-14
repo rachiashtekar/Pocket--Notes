@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import './CreateNotesandPopup.css';
+import React, { useState, useEffect } from "react";
+import "./CreateNotesandPopup.css";
 
 const colors = [
-  '#B38BFA',
-  '#FF79F2',
-  '#43E6FC',
-  '#F19576',
-  '#0047FF',
-  '#6691FF',
+  "#B38BFA",
+  "#FF79F2",
+  "#43E6FC",
+  "#F19576",
+  "#0047FF",
+  "#6691FF",
 ];
 
 const getInitials = (name) => {
-  const words = name.split(' ');
-  const initials = words.reduce((acc, word) => acc + word[0], '');
+  const words = name.split(" ");
+  const initials = words.reduce((acc, word) => acc + word[0], "");
   return initials.toUpperCase();
 };
 
 function CreateNotesAndPopup({ onGroupSelect }) {
-  const [groupName, setGroupName] = useState('');
+  const [groupName, setGroupName] = useState("");
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [isFormOpen, setFormOpen] = useState(false);
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
     try {
-      const storedNotes = JSON.parse(localStorage.getItem('notes')) || [];
+      const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
       setNotes(storedNotes);
     } catch (error) {
-      console.error('Error parsing JSON from local storage:', error);
+      console.error("Error parsing JSON from local storage:", error);
       setNotes([]);
     }
   }, []);
@@ -42,7 +42,7 @@ function CreateNotesAndPopup({ onGroupSelect }) {
 
   const handleCreate = () => {
     if (!groupName.trim()) {
-      alert('Group name cannot be empty');
+      alert("Group name cannot be empty");
       return;
     }
 
@@ -52,9 +52,9 @@ function CreateNotesAndPopup({ onGroupSelect }) {
     };
 
     const updatedNotes = [...notes, newNote];
-    localStorage.setItem('notes', JSON.stringify(updatedNotes));
+    localStorage.setItem("notes", JSON.stringify(updatedNotes));
 
-    setGroupName('');
+    setGroupName("");
     setSelectedColor(colors[0]);
     setFormOpen(false);
     setNotes(updatedNotes);
@@ -77,8 +77,10 @@ function CreateNotesAndPopup({ onGroupSelect }) {
         <div className="form-overlay">
           <div className="form-data">
             <div className="form-div">
-              <p style={{ fontSize: '20px', fontWeight: '500' }}>Create New Group</p>
-              <label htmlFor="group-name">Group Name:</label>{' '}
+              <p style={{ fontSize: "20px", fontWeight: "500" }}>
+                Create New Group
+              </p>
+              <label htmlFor="group-name">Group Name:</label>{" "}
               <input
                 id="group-name"
                 className="input-name"
@@ -95,7 +97,8 @@ function CreateNotesAndPopup({ onGroupSelect }) {
                       key={index}
                       style={{
                         backgroundColor: color,
-                        border: color === selectedColor ? '2px solid #000' : 'none',
+                        border:
+                          color === selectedColor ? "2px solid #000" : "none",
                       }}
                       onClick={() => handleColorChange(color)}
                     ></li>
@@ -112,20 +115,25 @@ function CreateNotesAndPopup({ onGroupSelect }) {
         </div>
       )}
 
-      <div className="saved-notes"  >
+      <div className="saved-notes">
         <ul>
           {notes.map((note, index) => (
-            <li key={index} onClick={() => handleGroupClick(index)  }>
+            <li key={index} onClick={() => handleGroupClick(index)}>
               <div className="circle-bg">
                 <div
                   className="circle"
-                  style={{ backgroundColor: note.selectedColor, margin: '10px' }}
+                  style={{
+                    backgroundColor: note.selectedColor,
+                    margin: "10px",
+                  }}
                 >
                   {getInitials(note.groupName)}
                 </div>
               </div>
-              <span style={{ fontSize: '18px', fontWeight: '500', padding: '10px'  }}>
-                {' '}
+              <span
+                style={{ fontSize: "18px", fontWeight: "500", padding: "10px" }}
+              >
+                {" "}
                 {note.groupName}
               </span>
             </li>

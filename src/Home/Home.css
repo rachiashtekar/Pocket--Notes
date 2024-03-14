@@ -88,6 +88,9 @@
     /* margin-top: 10px; */
     border-radius: 9px;
   }
+  
+
+  
   @media only screen and (max-width: 479px) {
     .main-container {
       display: none;
@@ -97,6 +100,8 @@
       display: block !important; /* Small screen पर selected group को दिखाएँ */
     }
   }
+  
+  
 }
 /* media qury for selected group */
 
