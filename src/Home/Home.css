@@ -120,19 +120,29 @@
   .group-heading {
     display: flex;
     align-items: center;
-    background: blue;
+    background: #001F8B;
+
     color: white;
-    margin-top: 10px;
+    margin-top: 1px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    height: 70px;
+   
   }
   
   .initials-circle {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    
   }
   .task-item {
     margin-bottom: 10px;
@@ -163,6 +173,31 @@
     top: 0px;
     background: #dae5f5;
   }
+  .home-list{
+    list-style-type: none;
+  }
+  .home-heading{
+    background:white;
+    height: 400px;
+    width: 1130px;
+  }
+  .home-textarea{
+   height: 30vh;
+   width:73vw;
+    border:18px solid #001F8B;
+    background-color: white;
+    margin-left:10px;
+    border-radius: 9px;
+    margin-top: 10px;
+  }
+  .outer-textarea{
+    background: #001F8B;
+    height:31vh ;
+    /* margin-top: 10px; */
+    border-radius: 9px;
+    
+  }
+  
 }
 
 /* For when selectedGroup is not present */

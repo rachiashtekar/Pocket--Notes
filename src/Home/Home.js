@@ -111,6 +111,7 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import lock from "../Assets/lock.png";
 import image1 from "../Assets/image1.png";
+import vector from "../Assets/Vector.png";
 import { getInitials } from "../Utils";
 
 function Home({ selectedGroup }) {
@@ -146,7 +147,11 @@ function Home({ selectedGroup }) {
   };
 
   return (
-    <div className={`big-container ${selectedGroup ? 'selected-group' : 'no-selected-group'}`}>
+    <div
+      className={`big-container ${
+        selectedGroup ? "selected-group" : "no-selected-group"
+      }`}
+    >
       <div className="main-container">
         <div className="container">
           {/* Render the desktop image only if there's no selected group */}
@@ -170,8 +175,16 @@ function Home({ selectedGroup }) {
           <div>
             {!selectedGroup && (
               <div>
-                <h1 style={{position:"relative",top:"6px"}} className="heading">Pocket Notes</h1>
-                <p style={{position:"relative",top:"20px"}} className="paragraph">
+                <h1
+                  style={{ position: "relative", top: "6px" }}
+                  className="heading"
+                >
+                  Pocket Notes
+                </h1>
+                <p
+                  style={{ position: "relative", top: "20px" }}
+                  className="paragraph"
+                >
                   Send and receive messages without keeping your phone online.
                   Use Pocket Notes on up to 4 linked devices and 1 mobile phone
                 </p>
@@ -197,13 +210,31 @@ function Home({ selectedGroup }) {
                 </ul>
               </div>
               {/* Textarea for adding tasks */}
-              <div>
-                <textarea
-                  placeholder="Enter task..."
-                  value={task}
-                  onChange={handleTaskChange}
-                ></textarea>
-                <button onClick={handleAddTask}>Send</button>
+              <div className="outer-textarea">
+                <div className="home-textarea">
+                  <textarea
+                    style={{
+                      maxHeight: "23vh",
+                      maxWidth: "69vw",
+                      borderRadius: "9px",
+                      border: "none",
+                      fontSize: "25px",
+                    }}
+                    placeholder="Enter your text here..........."
+                    value={task}
+                    onChange={handleTaskChange}
+                  ></textarea>
+                  <button
+                    style={{ background: "none", border: "none" }}
+                    onClick={handleAddTask}
+                  >
+                    <img
+                      style={{ height: "20px", width: "20px" }}
+                      src={vector}
+                      alt="send button"
+                    />
+                  </button>
+                </div>
               </div>
             </>
           )}
@@ -214,4 +245,3 @@ function Home({ selectedGroup }) {
 }
 
 export default Home;
-
