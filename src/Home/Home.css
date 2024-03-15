@@ -94,7 +94,7 @@
   
 
   
-  @media only screen and (max-width: 479px) {
+  /* @media only screen and (max-width: 479px) {
     .main-container {
       display: none;
     }
@@ -102,8 +102,17 @@
     .selected-group {
       display: flex !important; 
     }
-    .notes-container{
-      display: block;
+    
+  } */
+
+
+  @media only screen and (min-width: 480px) {
+    .main-container {
+      display: none;
+    }
+
+    .selected-group {
+      display: flex !important;
     }
   }
   
