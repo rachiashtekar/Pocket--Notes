@@ -97,7 +97,7 @@
     }
 
     .selected-group {
-      display: block !important; /* Small screen पर selected group को दिखाएँ */
+      display: flex !important; /* Small screen पर selected group को दिखाएँ */
     }
   }
   
