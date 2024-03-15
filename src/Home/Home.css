@@ -106,7 +106,7 @@
   } */
 
 
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 50%) {
     .main-container {
       display: none;
     }
