@@ -197,12 +197,12 @@
   .notes-container {
     width: 100%;
   }
-
+/* 
   .create-notes-button {
     position: sticky;
     top: 500px;
     left: 900px;
-  }
+  } */
 
   .btn {
     font-size: 70px;

@@ -45,7 +45,10 @@
 
   .time {
     flex: 1;
-    /* margin-right: 10%; */
+    margin-left: 80%;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  
   }
 
   .task {
@@ -97,7 +100,10 @@
     }
 
     .selected-group {
-      display: flex !important; /* Small screen पर selected group को दिखाएँ */
+      display: flex !important; 
+    }
+    .notes-container{
+      display: block;
     }
   }
   

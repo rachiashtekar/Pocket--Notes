@@ -10,11 +10,24 @@ const colors = [
   "#6691FF",
 ];
 
+
+
 const getInitials = (name) => {
   const words = name.split(" ");
-  const initials = words.reduce((acc, word) => acc + word[0], "");
+  const initials = words.reduce((acc, word, index) => {
+    // Include the first letter of the word if it's the first word or not the second word
+    if (index === 0 || index !== 1) {
+      return acc + word[0];
+    } else {
+      return acc; // Skip the second word
+    }
+  }, "");
   return initials.toUpperCase();
 };
+
+
+
+
 
 function CreateNotesAndPopup({ onGroupSelect }) {
   const [groupName, setGroupName] = useState("");
